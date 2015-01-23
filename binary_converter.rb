@@ -13,14 +13,14 @@ class BinaryConverter
 
   def convert_to_binary(number)
     binary_array = []
-    eval = number
-    while eval
-      binary_array << eval % 2
-      break if eval <= 0
-      eval = eval / 2
+    while number
+      binary_array << number % 2
+      break if number <= 0
+      number = number / 2
     end
     binary_array
   end
+
 
   def say_thanks(number, array)
     puts "Thanks!"
@@ -29,6 +29,7 @@ class BinaryConverter
   end
 
 end
+
 
 converter = BinaryConverter.new
 num = converter.request_input
