@@ -1,5 +1,9 @@
 class BinaryConverter
 
+  def initialize
+    @binary_array = []
+  end
+
   def request_input
     puts "Please enter a positive integer"
     num = gets.chomp.to_i
@@ -12,13 +16,12 @@ class BinaryConverter
 
 
   def convert_to_binary(number)
-    binary_array = []
     while number
-      binary_array << number % 2
+      @binary_array << number % 2
       break if number <= 0
       number = number / 2
     end
-    binary_array
+    @binary_array
   end
 
 
